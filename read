@@ -1,0 +1,16 @@
+参考：https://mp.weixin.qq.com/s?__biz=MzA5OTAyNzQ2OA==&mid=2649696817&idx=1&sn=1dd32274b8bcde6a262b44ce1de17c9a&chksm=88931552bfe49c4490d3a243ac71e6698799b2200319d12d6fc25f1fb7893e3fe3b06fc28dbc&mpshare=1&scene=1&srcid=0207hCjhWI47Ks563vNm1R7g#rd
+
+1、创建prodject、module，配置依赖关系。参考https://mp.weixin.qq.com/s?__biz=MzA5OTAyNzQ2OA==&mid=2649696817&idx=1&sn=1dd32274b8bcde6a262b44ce1de17c9a&chksm=88931552bfe49c4490d3a243ac71e6698799b2200319d12d6fc25f1fb7893e3fe3b06fc28dbc&mpshare=1&scene=1&srcid=0207hCjhWI47Ks563vNm1R7g#rd
+
+2、安装Docker
+   a. win7、win8 等需要利用 docker toolbox 来安装，国内可以使用阿里云的镜像来下载，下载地址：http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/
+   b. 下载安装完成桌面会有Oracle VM VirtualBox、Kitematic(Alpha)、Docker Quickstart Terminal
+   c. 运行Docker Quickstart Terminal，开始会初始化一些默认配置（耐心等待），等出现$代表完成。（如初始化过程中出现初始化失败，请安装最新版本的docker toolbox或重启电脑重新打开Docker Quickstart Terminal或手动下载book2docker.iso放入指定目录）
+
+3、安装完成后，通过SSH方式登录boot2docker（docker toolbox不支持复制黏贴）,boot2docker的默认地址为192.168.99.100，SSH端口：22，默认的用户名和密码:docker/tcuser。
+
+4、通过 Docker 官方镜像加速，docker pull registry.docker-cn.com/myname/myrepo:mytag。也可以登录docker配置加速器，给下载镜像加速。
+
+5、启动zookeeper的容器后，还要启动chaimm/zookeeper-dubbo:1.0镜像中dubbo-admin项目的Tomcat，启动成功后访问IP:10000/dubbo-admin-2.8.4/，用户名密码可查询dubbo-admin项目中的配置。
+
+6、jenkins首次启动有可能卡在启动界面，原因是需要获取插件更新文件，解决方法：到jenkins的工作目录下，/var/jenkins_home/updates/,修改default.json文件，把 "connectionCheckUrl":"http://www.google.com/" 改为  "connectionCheckUrl":"http://www.baidu.com/"
