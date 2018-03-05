@@ -6,7 +6,6 @@
 	<groupId>com.gaoxi</groupId>
 	<artifactId>gaoxi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
 
 	<name>Gaoxi</name>
 	<description>Demo project for Spring Boot</description>
