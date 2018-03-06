@@ -11,10 +11,10 @@
 	<name>commonServiceFacade</name>
 	<description>Demo project for Spring Boot</description>
 
-	<parent>
-		<groupId>com.gaoxi</groupId>
-		<artifactId>gaoxi</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath>
-	</parent>
+	<!--<parent>-->
+		<!--<groupId>com.gaoxi</groupId>-->
+		<!--<artifactId>gaoxi</artifactId>-->
+		<!--<version>0.0.1-SNAPSHOT</version>-->
+		<!--<relativePath>../pom.xml</relativePath>-->
+	<!--</parent>-->
 </project>
