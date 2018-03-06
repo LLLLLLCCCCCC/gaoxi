@@ -12,10 +12,15 @@ import com.commonservicefacade.UserService;
  * @Date：2018/2/9
  */
 @Service(version = "1.0.0")
+@org.springframework.stereotype.Service
 public class UserServiceImpl implements UserService {
     @Override
-    public UserEntity login(LoginReq loginReq) {
+    public String login(String name, String pwd) {
         // 具体的实现代码
-        return null;
+        if ("liuchuang".equals(name) && "liuchuang".equals(pwd)) {
+            return "true";
+        } else {
+            return "false";
+        }
     }
 }

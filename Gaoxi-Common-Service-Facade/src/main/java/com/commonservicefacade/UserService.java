@@ -7,5 +7,5 @@ package com.commonservicefacade;
  * @Date：2018/2/9
  */
 public interface UserService {
-    public UserEntity login(LoginReq loginReq);
+    public String login(String name, String pwd);
 }

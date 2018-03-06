@@ -12,5 +12,5 @@ import javax.xml.transform.Result;
  * @Date：2018/2/9
  */
 public interface UserController {
-    public Result login(LoginReq loginReq, HttpServletResponse httpRsp);
+    public String login(String name, String pwd);
 }
