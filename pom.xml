@@ -121,32 +121,6 @@
 						<goals>
 							<goal>redeploy</goal>
 						</goals>
-						<configuration>
-							<resources>
-								<resource>
-									<!-- 标识配置文件所在的目录 -->
-									<directory>src/main/resources</directory>
-									<filtering>true</filtering>
-									<!-- 构建时将这些配置文件全都排除掉 -->
-									<excludes>
-										<exclude>application.properties</exclude>
-										<exclude>application-dev.properties</exclude>
-										<exclude>application-test.properties</exclude>
-										<exclude>application-prod.properties</exclude>
-									</excludes>
-								</resource>
-								<resource>
-									<directory>src/main/resources</directory>
-									<filtering>true</filtering>
-									<!-- 标识构建时所需要的配置文件 -->
-									<includes>
-										<include>application.properties</include>
-										<!-- ${profileActive}这个值会在maven构建时传入 -->
-										<include>application-${profileActive}.properties</include>
-									</includes>
-								</resource>
-							</resources>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
@@ -163,31 +137,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
-	<profiles>
-		<profile>
-			<id>dev</id>
-			<properties>
-				<profileActive>dev</profileActive>
-			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-		</profile>
-		<profile>
-			<id>test</id>
-			<properties>
-				<profileActive>test</profileActive>
-			</properties>
-		</profile>
-		<profile>
-			<id>prod</id>
-			<properties>
-				<profileActive>prod</profileActive>
-			</properties>
-		</profile>
-	</profiles>
 
 
 </project>
