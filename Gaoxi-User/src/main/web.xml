@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>cn.com.capinfo.zlzy.BxjywebApplication</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.boot.legacy.context.web.SpringBootContextLoaderListener</listener-class>
+    </listener>
+
+    <!--<filter>-->
+        <!--<filter-name>metricsFilter</filter-name>-->
+        <!--<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->
+    <!--</filter>-->
+
+    <!--<filter-mapping>-->
+        <!--<filter-name>metricsFilter</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <servlet>
+        <servlet-name>appServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextAttribute</param-name>
+            <param-value>org.springframework.web.context.WebApplicationContext.ROOT</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>appServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<servlet-name>OauthService</servlet-name>-->
+        <!--<servlet-class>com.sx.ldlsc.oauth.OauthService</servlet-class>-->
+        <!--<init-param>-->
+            <!--&lt;!&ndash; 刷新间隔 （分钟）&ndash;&gt;-->
+            <!--<param-name>sleeptime</param-name>-->
+            <!--<param-value>100</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--&lt;!&ndash; rbac访问路径 &ndash;&gt;-->
+            <!--<param-name>rbacurl</param-name>-->
+            <!--<param-value>http://www.bksx.cn/zjtest1</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>clientid</param-name>-->
+            <!--<param-value>fb1afb486d5d01</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>clientsecret</param-name>-->
+            <!--<param-value>xhm5duVSGIpsX8BJEV6iLyypEGkZ8z6B</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>apiurl</param-name>-->
+            <!--<param-value>http://www.bksx.cn/zjtest</param-value>-->
+        <!--</init-param>-->
+        <!--<load-on-startup>2</load-on-startup>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>OauthService</servlet-name>-->
+        <!--<url-pattern>/index</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+</web-app>
