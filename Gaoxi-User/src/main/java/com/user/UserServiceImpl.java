@@ -10,7 +10,6 @@ import com.commonservicefacade.UserService;
  * @Date：2018/2/9
  */
 @Service(version = "1.0.0")
-@org.springframework.stereotype.Service
 public class UserServiceImpl implements UserService {
     @Override
     public String login(String name, String pwd) {
