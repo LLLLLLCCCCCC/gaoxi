@@ -1,8 +1,6 @@
 package com.user;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.commonservicefacade.LoginReq;
-import com.commonservicefacade.UserEntity;
 import com.commonservicefacade.UserService;
 
 /**
