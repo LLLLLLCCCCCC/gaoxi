@@ -117,8 +117,8 @@
 					</container>
 					<configuration>
 						<type>runtime</type>
-						<cargo.remote.username>admin</cargo.remote.username>
-						<cargo.remote.password>jishimen2019</cargo.remote.password>
+						<cargo.remote.username>tomcat</cargo.remote.username>
+						<cargo.remote.password>tomcat</cargo.remote.password>
 					</configuration>
 				</configuration>
 				<executions>
